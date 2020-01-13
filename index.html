@@ -7,13 +7,20 @@
     <body>
         <form action="index.html">
             <div>
-                Kilométrage total&nbsp;: 0 km
+               Kilométrage total&nbsp;:0 km
             </div>
             <div>
                 <label for="kiloReal">Kilometrage réalisé&nbsp;:</label>
-                <input type="text" name="kiloReal" value="0">
-                <input type="submit" name="action" value="Ajouter">
+                <input type="text" id="kiloReal" name="kiloReal" value="0">
+                <input type="submit" name="action" value="Ajouter"
+                   onclick="displayValue()">  
             </div>
         </form>
+        <script type="text/javascript">
+            function displayValue() {
+                let kiloRealElement = document.getElementById("kiloReal")
+                alert(kiloRealElement.value)
+            }
+        </script>
     </body>
 </html>
